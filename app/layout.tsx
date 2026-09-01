@@ -5,7 +5,7 @@ import { getUser, getTeamForUser } from "@/lib/db/queries";
 import { SWRConfig } from "swr";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lastlayer.com"),
+  metadataBase: new URL("https://lastlayer.ca"),
   applicationName: "Last Layer",
   title: {
     default: "Last Layer | 3D Printing & Design Services",
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
   creator: "Last Layer",
   publisher: "Last Layer",
   openGraph: {
-    title: "Last Layer | 3D Printing & Design Studio",
+    title: "Last Layer | 3D Printing & Design Services",
     description:
       "Custom 3D printed products, rapid prototyping, and product design services built for modern brands and makers.",
-    url: "https://lastlayer.com",
+    url: "https://lastlayer.ca",
     siteName: "Last Layer",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Last Layer | 3D Printing & Design Studio",
+    title: "Last Layer | 3D Printing & Design Services",
     description:
       "Custom 3D printed products, rapid prototyping, and product design services built for modern brands and makers.",
   },
