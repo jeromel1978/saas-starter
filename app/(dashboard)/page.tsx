@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Database } from "lucide-react";
 import { Terminal } from "./terminal";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,18 @@ export default function HomePage() {
             Custom 3D design and production for products the world hasn't seen
             yet — and for the ones you need made exactly your way.
           </h2>
+        </div>
+      </section>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          We are still working on things, so if you want to get in touch while
+          we are working on the site, email{" "}
+          <Link
+            href="mailto:admin@lastlayer.ca"
+            className="underline text-red-500"
+          >
+            admin@lastlayer.ca
+          </Link>
         </div>
       </section>
     </main>
