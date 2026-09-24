@@ -6,7 +6,14 @@ import { SubmitButton } from "./submit-button";
 // Prices are fresh for one hour max
 export const revalidate = 3600;
 
-export default async function PricingPage() {
+type ProductProps = {
+  params: Promise<{ Cat: string }>;
+};
+
+export default async function ProductPage(props: ProductProps) {
+  const Params = await props.params;
+  console.log("Params.Cat", Params.Cat);
+
   const [prices, products] = await Promise.all([
     getStripePrices(),
     getStripeProducts(),
@@ -17,24 +24,26 @@ export default async function PricingPage() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid md:grid-cols-2 gap-8 max-w-xl mx-auto">
-        {products.map((price) => (
-          <PricingCard
-            key={price.id}
-            name={price?.name || "Base"}
-            price={0}
-            interval="once"
-            trialDays={0}
-            // price={price?.unitAmount || 800}
-            // interval={price?.interval || "month"}
-            // trialDays={price?.trialPeriodDays || 7}
-            features={[
-              "Unlimited Usage",
-              "Unlimited Workspace Members",
-              "Email Support",
-            ]}
-            priceId={price?.id}
-          />
-        ))}
+        {products
+          .filter((p) => p.active && p.type === "good")
+          .map((price) => (
+            <PricingCard
+              key={price.id}
+              name={price?.name || "Base"}
+              price={0}
+              interval="once"
+              trialDays={0}
+              // price={price?.unitAmount || 800}
+              // interval={price?.interval || "month"}
+              // trialDays={price?.trialPeriodDays || 7}
+              features={[
+                "Unlimited Usage",
+                "Unlimited Workspace Members",
+                "Email Support",
+              ]}
+              priceId={price?.id}
+            />
+          ))}
       </div>
     </main>
   );

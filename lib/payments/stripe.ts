@@ -187,5 +187,7 @@ export async function getStripeProducts() {
         : product.default_price?.id,
     active: product.active,
     type: product.type,
+    category: product.metadata.category || null,
+    subcategory: product.metadata.subcategory || null,
   }));
 }

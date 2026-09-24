@@ -36,10 +36,16 @@ function UserMenu() {
     return (
       <>
         <Link
-          href="/pricing"
+          href="/products"
           className="text-sm font-medium text-gray-700 hover:text-gray-900"
         >
-          Pricing
+          Products
+        </Link>
+        <Link
+          href="/services"
+          className="text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          Services
         </Link>
         <Button asChild className="rounded-full">
           <Link href="/sign-up">Sign Up</Link>
