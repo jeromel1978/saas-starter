@@ -35,18 +35,26 @@ function UserMenu() {
 
   return (
     <>
-      <Link
-        href="/develop"
-        className="text-sm font-medium text-gray-700 hover:text-gray-900"
-      >
-        Make It
-      </Link>
-      <Link
-        href="/products"
-        className="text-sm font-medium text-gray-700 hover:text-gray-900"
-      >
-        Products
-      </Link>
+      <nav aria-label="Main navigation" className="flex items-center space-x-4">
+        <Link
+          href="/develop"
+          className="text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          Make It
+        </Link>
+        <Link
+          href="/products"
+          className="text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          Products
+        </Link>
+        <Link
+          href="/about"
+          className="text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          About
+        </Link>
+      </nav>
       {!user && (
         <Button asChild className="rounded-full">
           <Link href="/sign-up">Sign Up</Link>

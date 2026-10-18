@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-import DevelopSteps from "../DevelopSteps";
+import DevelopTools from "../DevelopTools";
 
 export default function ConfirmationPage() {
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <DevelopSteps currentStep="submit" />
+      <DevelopTools currentTool="submit" />
       <section
         aria-labelledby="confirmation-title"
         className="mx-auto max-w-xl rounded-lg border border-gray-200 bg-white px-6 py-12 text-center shadow-sm"

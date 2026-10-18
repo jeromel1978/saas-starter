@@ -29,13 +29,14 @@
     "mailgun.js": "^14.1.0",
     "next": "15.6.0-canary.59",
     "next-auth": "^4.24.15",
-    "postcss": "^8.5.29",
+    "postcss": "^8.5.30",
     "postgres": "^3.4.9",
-    "radix-ui": "^1.7.0",
+    "radix-ui": "^1.8.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "server-only": "^0.0.1",
     "stripe": "^18.5.0",
+    "svgedit": "^7.4.2",
     "swr": "^2.5.1",
     "tailwind-merge": "^3.7.0",
     "tailwindcss": "4.1.7",
@@ -44,7 +45,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.20.5",
-    "baseline-browser-mapping": "^2.11.28",
+    "baseline-browser-mapping": "^2.11.29",
     "typescript": "^5.9.3"
   },
   "allowScripts": {
